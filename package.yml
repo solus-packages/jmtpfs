@@ -1,0 +1,19 @@
+name       : jmtpfs
+version    : 0.5
+release    : 1
+source     :
+    - https://github.com/JasonFerrara/jmtpfs/archive/v0.5.tar.gz : c0cacc4751c586a3b2b0fcd9c98dae4810a5d44f3eb9d2870868a15eeb696883
+license    : GPL-3.0
+summary    : jmtpfs is a FUSE and libmtp based filesystem for accessing MTP (Media Transfer Protocol) devices.
+description: |
+    jmtpfs is a FUSE and libmtp based filesystem for accessing MTP (Media Transfer Protocol) devices.
+builddeps  :
+    - pkgconfig(libmtp)
+    - pkgconfig(fuse)
+clang      : no
+setup      : |
+    %configure
+build      : |
+    %make
+install    : |
+    %make_install
